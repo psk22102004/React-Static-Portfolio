@@ -1,9 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button, Modal } from "flowbite-react";
 
 const Projects = () => {
-  
-
 
     const [openModal, setOpenModal] = useState(false);
 
@@ -15,64 +13,53 @@ const Projects = () => {
         { iconSrc: 'cardIcons/tourism.png', title: 'Tourism Website', illustration: 'illustrations/tourismIllustration.png', desc: 'lorem ipsum Lorem ipsum dolor sit Et atque aliquam, voluptatem aspernatur repellat voluptates' },
         { iconSrc: 'cardIcons/farming.png', title: 'FarmConnect', illustration: 'illustrations/farmingIllustration.png', desc: 'lorem ipsum Lorem ipsum dolor sit Et atque aliquam, voluptatem aspernatur repellat voluptates' },
         { iconSrc: 'cardIcons/finance.png', title: 'Finanger', illustration: 'illustrations/financeIllustration.png', desc: 'lorem ipsum Lorem ipsum dolor sit Et atque aliquam, voluptatem aspernatur repellat voluptates' },
-    ]
+    ];
 
     const [currentProject, setCurrentProject] = useState(null);
 
     const handleClick = (ele) => {
-        ele.projectImg ? setCurrentProject(ele) : null;
-        setOpenModal(true)
-    }
+        setCurrentProject(ele);
+        setOpenModal(true);
+    };
 
     return (
-        <section id='Projects'>
-            <div className=' bg-sblack text-dgreen  mx-auto p-4 md:p-10 md:pt-16 space-y-6'>
-                <h1 className='font-bold text-3xl md:text-5xl text-center'>My Projects</h1>
-                <div className='grid grid-cols-12 w-full p-6 gap-6'>
-                    {projectsArray.map(
-                        (ele, index) => (
-                            <div key={index} className='border p-8 md:p-6  space-y-6 rounded-lg bg-dblack  hover:shadow-lg hover:shadow-dgreen col-span-12 md:col-span-6 lg:col-span-4'>
-                                <img src={ele.illustration} className='h-44 mx-auto w-auto ' />
-                                <hr className='bg-green-200 text-white h-0.5 w-full ' />
-                                <div className='flex flex-col space-y-6'>
-                                    <div className='flex items-center '>
-                                        <img className='h-12 w-12 bg-white p-1 rounded-lg mr-4' src={ele.iconSrc} alt="Project Icon" />
-                                        <h1 className='font-bold text-3xl tracking-wide'>{ele.title}</h1>
-                                    </div>
-                                    <p className='font-semibold text-sm mb-4'>{ele.desc}</p>
-                                    <div className='mt-auto'>
-                                        <button onClick={() => { handleClick(ele) }} className='px-4 py-2 border font-semibold rounded-md bg-sblack hover:bg-dblack'>Image Gallery</button>
-                                    </div>
-                                </div>
-
-                                <Modal dismissible show={openModal} size='4xl' onClose={() => setOpenModal(false)}>
-                                    <Modal.Header>Project Image Gallery</Modal.Header>
-                                    <Modal.Body className='w-full bg-dblack '>
-                                        <div className='p-4 w-full overflow-auto h-full space-y-4 border-2 bg-dblack'>
-                                            {
-                                                currentProject ? currentProject.projectImg.map(
-                                                    (imgSrc) => (
-                                                        <img src={imgSrc} className='w-full ' />
-                                                    )
-                                                )
-                                                    :
-                                                    <h1 className='text-3xl text-white'>Images coming soon !</h1>
-                                            }
-
-                                        </div>
-                                    </Modal.Body>
-                                </Modal>
+        <div className=' bg-sblack text-dgreen mx-auto p-4 md:p-10 md:pt-16 space-y-6'>
+            <h1 className='font-bold text-3xl md:text-5xl text-center'>My Projects</h1>
+            <div className='grid grid-cols-12 w-full p-6 gap-6'>
+                {projectsArray.map((ele, index) => (
+                    <div key={index} className='border p-8 md:p-6 space-y-6 rounded-lg bg-dblack hover:shadow-lg hover:shadow-dgreen col-span-12 md:col-span-6 lg:col-span-4'>
+                        <img src={ele.illustration} className='h-44 mx-auto w-auto' alt={`${ele.title} Illustration`} />
+                        <hr className='bg-green-200 text-white h-0.5 w-full' />
+                        <div className='flex flex-col space-y-6'>
+                            <div className='flex items-center'>
+                                <img className='h-12 w-12 bg-white p-1 rounded-lg mr-4' src={ele.iconSrc} alt={`${ele.title} Icon`} />
+                                <h1 className='font-bold text-3xl tracking-wide'>{ele.title}</h1>
                             </div>
+                            <p className='font-semibold text-sm mb-4'>{ele.desc}</p>
+                            <div className='mt-auto'>
+                                <button onClick={() => handleClick(ele)} className='px-4 py-2 border font-semibold rounded-md bg-sblack hover:bg-dblack'>Image Gallery</button>
+                            </div>
+                        </div>
+                    </div>
+                ))}
 
-
-
-                        )
-                    )}
-
-                </div>
+                <Modal dismissible show={openModal} size='4xl' onClose={() => setOpenModal(false)}>
+                    <Modal.Header>Project Image Gallery</Modal.Header>
+                    <Modal.Body className='w-full bg-dblack'>
+                        <div className='p-4 w-full overflow-auto h-full space-y-4 border-2 bg-dblack'>
+                            {currentProject && currentProject.projectImg ? (
+                                currentProject.projectImg.map((imgSrc, imgIndex) => (
+                                    <img key={imgIndex} src={imgSrc} className='w-full' alt={`Project ${currentProject.title} Image ${imgIndex + 1}`} />
+                                ))
+                            ) : (
+                                <h1 className='text-3xl text-white'>Images coming soon!</h1>
+                            )}
+                        </div>
+                    </Modal.Body>
+                </Modal>
             </div>
-        </section>
-    )
-}
+        </div>
+    );
+};
 
-export default Projects
+export default Projects;
