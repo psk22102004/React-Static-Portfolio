@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Skills = () => {
+   
+
     const skillArray = [
         { name: 'HTML', value: 98, imgSrc: 'html.png' },
         { name: 'React js', value: 95, imgSrc: 'react.png' },
@@ -21,16 +23,16 @@ const Skills = () => {
                     skillArray.map(
                         (ele, index) => {
                             return (
-                                <div key={index} className='Card hover:shadow-lg hover:shadow-dgreen bg-dblack p-4 space-y-6 rounded-tl-2xl rounded-br-2xl border-l-8 border-r  border col-span-12 md:col-span-6 lg:col-span-4'>
-                                    <div className='flex gap-5 items-center'>
-                                        <img className=' h-12 w-12 ' src={ele.imgSrc} />
-                                        <h1 className='text-xl font-semibold'>{ele.name}</h1>
+                                    <div key={index} className='Card hover:shadow-lg hover:shadow-dgreen bg-dblack p-4 space-y-6 rounded-tl-2xl rounded-br-2xl border-l-8 border-r  border col-span-12 md:col-span-6 lg:col-span-4'>
+                                        <div className='flex gap-5 items-center'>
+                                            <img className=' h-12 w-12 ' src={ele.imgSrc} />
+                                            <h1 className='text-xl font-semibold'>{ele.name}</h1>
+                                        </div>
+                                        {/* PROGRESS BAR */}
+                                        <div className='border h-3 rounded-full w-full '>
+                                            <div className='bg-dgreen h-full' style={{ width: `${ele.value}%` }}></div>
+                                        </div>
                                     </div>
-                                    {/* PROGRESS BAR */}
-                                    <div className='border h-3 rounded-full w-full '>
-                                        <div className='bg-dgreen h-full' style={{ width: `${ele.value}%` }}></div>
-                                    </div>
-                                </div>
                             )
                         }
                     )
