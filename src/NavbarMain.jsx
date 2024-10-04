@@ -22,16 +22,16 @@ const NavbarMain = () => {
 
         {/* Navbar Links */}
         <Navbar.Collapse className="space-x-4  p-4">
-          <a href="#" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Home" className="hover:text-green-400 transition-colors text-lg">
             Home
           </a>
-          <a href="#services" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Tech" className="hover:text-green-400 transition-colors text-lg">
             Tech-Stack
           </a>
-          <a href="#pricing" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Projects" className="hover:text-green-400 transition-colors text-lg">
             Projects
           </a>
-          <a href="#contact" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Contact" className="hover:text-green-400 transition-colors text-lg">
             Contact
           </a>
         </Navbar.Collapse>

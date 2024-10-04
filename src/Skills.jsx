@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 const Skills = () => {
-   
+
 
     const skillArray = [
         { name: 'HTML', value: 98, imgSrc: 'html.png' },
@@ -16,13 +16,14 @@ const Skills = () => {
 
     ]
     return (
-        <div className='bg-sblack text-dgreen mx-auto p-4 md:p-10 md:pt-16 space-y-6'>
-            <h1 className='font-bold text-3xl md:text-5xl text-center'>Tech-Stack</h1>
-            <div className='grid grid-cols-12 w-full p-4 gap-6'>
-                {
-                    skillArray.map(
-                        (ele, index) => {
-                            return (
+        <section id='Tech'>
+            <div className='bg-sblack text-dgreen mx-auto p-4 md:p-10 md:pt-16 space-y-6'>
+                <h1 className='font-bold text-3xl md:text-5xl text-center'>Tech-Stack</h1>
+                <div className='grid grid-cols-12 w-full p-4 gap-6'>
+                    {
+                        skillArray.map(
+                            (ele, index) => {
+                                return (
                                     <div key={index} className='Card hover:shadow-lg hover:shadow-dgreen bg-dblack p-4 space-y-6 rounded-tl-2xl rounded-br-2xl border-l-8 border-r  border col-span-12 md:col-span-6 lg:col-span-4'>
                                         <div className='flex gap-5 items-center'>
                                             <img className=' h-12 w-12 ' src={ele.imgSrc} />
@@ -33,13 +34,14 @@ const Skills = () => {
                                             <div className='bg-dgreen h-full' style={{ width: `${ele.value}%` }}></div>
                                         </div>
                                     </div>
-                            )
-                        }
-                    )
-                }
+                                )
+                            }
+                        )
+                    }
 
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 
