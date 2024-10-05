@@ -34,7 +34,7 @@ const Contact = () => {
                     <img className='h-96 mx-auto' src='letter.png' />
                 </div>
                 <div className=' col-span-12 md:col-span-6 flex flex-col justify-between p-4 space-y-10'>
-                    <div className="bg-sblack border shadow-lg rounded-lg w-full relative p-8 space-y-6 text-[#28e98c]">
+                    <div className="bg-sblack border border-dgreen shadow-lg rounded-lg w-full relative p-8 space-y-6 text-dgreen">
                         <h1 className="text-4xl font-bold text-center">Get In Touch</h1>
                         <img src='plane2.png' className='h-20 w-20 absolute top-1 left-5 ' />
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -48,7 +48,7 @@ const Contact = () => {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full p-3 pl-10 text-sm rounded-md bg-[#171718] text-[#28e98c] border border-[#28e98c] focus:ring focus:ring-[#28e98c] outline-none"
+                                    className="w-full p-3 pl-10 text-sm rounded-md bg-white text-dgreen border border-dgreen focus:ring focus:ring-dgreen outline-none"
                                 />
                             </div>
 
@@ -62,7 +62,7 @@ const Contact = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
-                                    className="w-full p-3 pl-10 text-sm rounded-md bg-[#171718] text-[#28e98c] border border-[#28e98c] focus:ring focus:ring-[#28e98c] outline-none"
+                                    className="w-full p-3 pl-10 text-sm rounded-md bg-white text-dgreen border border-dgreen focus:ring focus:ring-dgreen outline-none"
                                 />
                             </div>
 
@@ -76,7 +76,7 @@ const Contact = () => {
                                     value={formData.phone}
                                     onChange={handleChange}
                                     required
-                                    className="w-full p-3 pl-10 text-sm rounded-md bg-[#171718] text-[#28e98c] border border-[#28e98c] focus:ring focus:ring-[#28e98c] outline-none"
+                                    className="w-full p-3 pl-10 text-sm rounded-md bg-white text-dgreen border border-dgreen focus:ring focus:ring-dgreen outline-none"
                                 />
                             </div>
 
@@ -89,14 +89,14 @@ const Contact = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
-                                    className="w-full p-3 pl-10 text-sm rounded-md bg-[#171718] text-[#28e98c] border border-[#28e98c] focus:ring focus:ring-[#28e98c] outline-none h-32"
+                                    className="w-full p-3 pl-10 text-sm rounded-md bg-white text-dgreen border border-dgreen focus:ring focus:ring-dgreen outline-none h-32"
                                 ></textarea>
                             </div>
 
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full p-3 bg-[#28e98c] text-[#171718] font-bold text-lg rounded-md hover:bg-[#1dd97a] transition duration-300">
+                                className="w-full p-3 bg-dgreen text-white font-bold text-lg rounded-md hover:bg-[#1dd97a] transition duration-300">
                                 Send Message
                             </button>
                         </form>

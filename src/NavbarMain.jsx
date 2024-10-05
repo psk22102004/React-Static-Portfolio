@@ -9,7 +9,7 @@ const NavbarMain = () => {
       <Navbar
         fluid
         rounded
-        className='bg-[#171718] border-2 border-[#28e98c] rounded-full shadow-lg p-6 items-center shadow-dgreen text-dgreen'
+        className='bg-[#97bdf9] border-2 border-white rounded-full shadow-lg p-6 items-center shadow-dblue text-black'
       >
         {/* Branding Section */}
         <Navbar.Brand href="/" className="flex items-center">
@@ -17,21 +17,21 @@ const NavbarMain = () => {
         </Navbar.Brand>
 
         {/* Navbar Toggle for Mobile */}
-        <Navbar.Toggle className="text-[#28e98c] hover:text-green-400" />
+        <Navbar.Toggle className="text-[#28e98c] hover:text-blue-800" />
         
 
         {/* Navbar Links */}
         <Navbar.Collapse className="space-x-4  p-4">
-          <a href="#Home" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Home" className="hover:text-blue-800 transition-colors text-lg">
             Home
           </a>
-          <a href="#Tech" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Tech" className="hover:text-blue-800 transition-colors text-lg">
             Tech-Stack
           </a>
-          <a href="#Projects" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Projects" className="hover:text-blue-800 transition-colors text-lg">
             Projects
           </a>
-          <a href="#Contact" className="hover:text-green-400 transition-colors text-lg">
+          <a href="#Contact" className="hover:text-blue-800 transition-colors text-lg">
             Contact
           </a>
         </Navbar.Collapse>

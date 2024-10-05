@@ -11,9 +11,9 @@ export default {
   theme: {
     extend: {
       colors :{
-        'dblack' : '#0e0e0e' , 
-        'sblack' : '#171718' ,
-        'dgreen' : '#28e98c'
+        'dblack' : '#669af4' , 
+        'sblack' : '#CADCFC' ,
+        'dgreen' : '#00246B'
       }
     },
   },

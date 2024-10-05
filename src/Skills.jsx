@@ -17,16 +17,16 @@ const Skills = () => {
     ]
     return (
         <section id='Tech'>
-            <div className='bg-sblack text-dgreen mx-auto p-4 md:p-10 md:pt-16 space-y-6'>
+            <div className='bg-sblack text-black mx-auto p-4 md:p-10 md:pt-16 space-y-6'>
                 <h1 className='font-bold text-3xl md:text-5xl text-center'>Tech-Stack</h1>
                 <div className='grid grid-cols-12 w-full p-4 gap-6'>
                     {
                         skillArray.map(
                             (ele, index) => {
                                 return (
-                                    <div key={index} className='Card hover:shadow-lg hover:shadow-dgreen bg-dblack p-4 space-y-6 rounded-tl-2xl rounded-br-2xl border-l-8 border-r  border col-span-12 md:col-span-6 lg:col-span-4'>
+                                    <div key={index} className='Card shadow-md hover:shadow-lg shadow-dgreen hover:shadow-dgreen bg-[#96c2fa] border-black p-4 space-y-6 rounded-tl-2xl rounded-br-2xl border-l-8 border-r  border col-span-12 md:col-span-6 lg:col-span-4'>
                                         <div className='flex gap-5 items-center'>
-                                            <img className=' h-12 w-12 ' src={ele.imgSrc} />
+                                            <img className=' h-12 w-12 bg-white p-1 rounded-xl ' src={ele.imgSrc} />
                                             <h1 className='text-xl font-semibold'>{ele.name}</h1>
                                         </div>
                                         {/* PROGRESS BAR */}
