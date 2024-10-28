@@ -11,7 +11,7 @@ const Skills = () => {
         { name: 'JavaScript', value: 90, imgSrc: 'js.png' },
         { name: 'Express', value: 80, imgSrc: 'express.png' },
         { name: 'Node js', value: 80, imgSrc: 'node.png' },
-        { name: 'Mongodb', value: 50, imgSrc: 'mongo.png' },
+        { name: 'Mongodb', value: 80, imgSrc: 'mongo.png' },
         { name: 'EJS', value: 80, imgSrc: 'ejs.png' },
 
     ]
